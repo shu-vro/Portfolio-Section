@@ -73,7 +73,112 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 ```
+For more information, goto [swiper js](https://swiperjs.com/demos)
 
 ## MixItUp
 
 MixItUp is a high-performance, dependency-free library for animated filtering, sorting, insertion, removal and more. MixItUp gives you beautiful animated DOM manipulation on top of native CSS layout. For more info, goto [mixitup official page](https://www.kunkalabs.com/mixitup/)
+
+## Starter Template
+
+In HTML 
+
+```html
+<nav class="about_nav padding_top">
+    <ul>
+        <li>
+            <!-- Mandatory data-filter attribute which contains the class name of the respective box. -->
+            <a class="filter active" href="#" data-filter="all">All</a>
+        </li>
+        <li>
+            <a class="filter" href="#" data-filter=".w1">W1</a>
+        </li>
+        <li>
+            <a class="filter" href="#" data-filter=".w2">W2</a>
+        </li>
+        <li>
+            <a class="filter" href="#" data-filter=".w3">W3</a>
+        </li>
+    </ul>
+</nav>
+<div class="mymixcont">
+    <div class="mix w1"></div>
+    <div class="mix w2"></div>
+    <div class="mix w3"></div>
+    <div class="mix w1"></div>
+    <div class="mix w2"></div>
+    <div class="mix w3"></div>
+    <div class="mix w1"></div>
+    <div class="mix w2"></div>
+    <div class="mix w3"></div>
+    <div class="mix w1"></div>
+    <div class="mix w2"></div>
+    <div class="mix w3"></div>
+</div>
+
+<!-- Linking jQuery and mixitup cdn -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mixitup@3.3.1/dist/mixitup.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+    // Get the container
+    let config = document.querySelector(".mymixcont");
+    var mixer = mixitup(config);
+</script>
+```
+
+In CSS
+
+```css
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
+}
+
+/* Selecting every box */
+.mix {
+    position: relative;
+    width: 20%;
+    height: 100px;
+    background: #000;
+    margin: 10px;
+    display: inline-block;
+}
+
+.w1 {
+    background: dodgerblue;
+}
+
+.w2 {
+    background: orangered;
+}
+
+.w3 {
+    background: indigo;
+}
+
+.mixBtns {
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.mixBtns a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    color: dodgerblue;
+    text-align: center;
+}
+
+```
+
+For more details, goto [MixItUp](https://www.kunkalabs.com/mixitup/docs/configuration-object/)
