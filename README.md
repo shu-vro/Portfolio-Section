@@ -3,7 +3,11 @@ PORTFOLIO SECTION &lt;HTML> {CSS} (JavaScript)
 
 This Reposiory is created with the help of 2 library which runs by [jQuery](https://jquery.com/). 
 
-The first library is [Swiper js](https://swiperjs.com) and the second library is [MixItUp](https://www.kunkalabs.com/mixitup/).
+They are:
+
+- [Swiper js](https://swiperjs.com)
+- [MixItUp](https://www.kunkalabs.com/mixitup/)
+
 
 ## Swiper Js
 
